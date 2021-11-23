@@ -9,10 +9,12 @@ const {
     deleteWorkout
 } = require('./controller.js')
 
-app.use(express.json())
+// app.use(express.json())
 app.use(cors())
 
 //Connect Public for Deployment
+// app.use(express.static("public"));
+
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/index.html'))
 })
@@ -28,8 +30,8 @@ app.get('/js', (req, res) => {
 app.get('/workout', getWorkout)
 
 // Create and Delete Workouts
-app.post('/post', createWorkout)
-app.delete('/delete', deleteWorkout)
+app.post('/workout', createWorkout)
+app.delete('/workout/:id', deleteWorkout)
 
 //PORT
 app.listen(SERVER_PORT, () => console.log(`up on ${SERVER_PORT}`))

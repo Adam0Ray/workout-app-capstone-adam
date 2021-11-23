@@ -1,4 +1,4 @@
-const form = document.querySelector('form')
+const form = document.querySelector('#formId')
 const workoutNameInput = document.querySelector('#workoutName')
 const descriptionInput = document.querySelector('#description')
 const exerciseOneInput = document.querySelector('#exerciseOne')
@@ -61,7 +61,7 @@ function handleSubmit(e) {
 }
 
 function deleteCard(workout_id) {
-    axios.delete(`api/workout/${workout_id}`)
+    axios.delete(`/workouts/${workout_id}`)
         .then(() => getWorkouts())
         .catch(err => console.log(err))
 }
@@ -69,7 +69,7 @@ function deleteCard(workout_id) {
 function getWorkouts() {
     workoutNameInput.innerHTML = ''
 
-    axios.get('http://localhost:4004/cities/')
+    axios.get('/workouts')
         .then(res => {
             res.data.forEach(elem => {
                 let workoutCard = `<div class="workout-card">
@@ -81,6 +81,7 @@ function getWorkouts() {
                 workoutNameInput.innerHTML += workoutCard
             })
         })
+        console.log(res)
 }
 
 
