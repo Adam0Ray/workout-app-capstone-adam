@@ -61,7 +61,7 @@ function handleSubmit(e) {
 }
 
 function deleteCard(workout_id) {
-    axios.delete(`/workouts/${workout_id}`)
+    axios.delete(`https://workout-app-capstone-adam.herokuapp.com/${workout_id}`)
         .then(() => getWorkouts())
         .catch(err => console.log(err))
 }
@@ -69,7 +69,7 @@ function deleteCard(workout_id) {
 function getWorkouts() {
     workoutNameInput.innerHTML = ''
 
-    axios.get('/workouts')
+    axios.get('https://workout-app-capstone-adam.herokuapp.com/')
         .then(res => {
             res.data.forEach(elem => {
                 let workoutCard = `<div class="workout-card">
