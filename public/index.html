@@ -8,71 +8,90 @@
     <link rel="stylesheet" href="../public/index.css">
 </head>
 <body>
-    <h1>3-By-30 Workout App</h1>
-        <p>This app is designed to create and share exercises which consist of 3 different exercises to be performed under 30 minutes </p>
-    <form id="formId">
-        <input 
-            type='text'
-            id="workoutName"
-            placeholder="Workout Name?"/>
-            <br>
-        <input 
-            type='text'
-            id="description"
-            placeholder="Describe the workout"/>   
-            <br>         
-        <input 
-            type='text'
-            id="exerciseOne"
-            placeholder='First exercise?'/>
-            <br>
-        <input 
-            type='text'
-            id="repititionsOne"
-            placeholder="Number of Reps?"/>
-            <br>
-        <input 
-            type='text'
-            id="setsOne"
-            placeholder='Number of Sets?'/> 
-            <br>           
-        <input 
-            type='text'
-            id="exerciseTwo"
-            placeholder="Second Exercise?"/>
-            <br>
-        <input 
-            type='text'
-            id="repititionsTwo"
-            placeholder='Number of Reps?'/>
-            <br>
-        <input 
-            type='text'
-            id="setsTwo"
-            placeholder="Number of Sets?"/>
-            <br>
-        <input 
-            type='text'
-            id="exerciseThree"
-            placeholder="Third Exercise?"/>
-            <br>
-        <input 
-            type='text'
-            id="repititionsThree"
-            placeholder='Number of Reps?'/>
-            <br>
-        <input 
-            type='text'
-            id="setsThree"
-            placeholder="Number of Sets?"/>  
-            <br>          
-           
-        <button>Add Workout</button>
-    </form>
+    <header>
+        <h1>3-By-30 Workout App</h1>
+            <p>This app is designed to create and share exercises which consist of 3 different exercises to be performed under 30 minutes with the intention of very little to no breaks during the circuit. </p>
+            <p>To add a workout, Please fill in the form below and Click the Add Workout button</p>
+    </header>
 
-    <button id ="getWorkoutsBtn">See Workouts</button>
+<div class = "leftColumn">
 
+    </div>
+        <form id="formId">         
+            <div id="locator">
+                <img src="https://cdn.pixabay.com/photo/2016/03/27/23/00/weight-lifting-1284616__340.jpg" alt="Photo of weights" >
+                
+            </div>
+
+            <input 
+                type='text'
+                id="workoutName"
+                placeholder="Workout Name?"/>
+                <br>
+
+            <input 
+                type='text'
+                id="description"
+                placeholder="Describe the workout"/>   
+                <br>         
+            <input 
+                type='text'
+                id="exerciseOne"
+                placeholder='First exercise?'/>
+                <br>
+            <input 
+                type='text'
+                id="repititionsOne"
+                placeholder="Number of Reps?"/>
+                <br>
+            <input 
+                type='text'
+                id="setsOne"
+                placeholder='Number of Sets?'/> 
+                <br>           
+            <input 
+                type='text'
+                id="exerciseTwo"
+                placeholder="Second Exercise?"/>
+                <br>
+            <input 
+                type='text'
+                id="repititionsTwo"
+                placeholder='Number of Reps?'/>
+                <br>
+            <input 
+                type='text'
+                id="setsTwo"
+                placeholder="Number of Sets?"/>
+                <br>
+            <input 
+                type='text'
+                id="exerciseThree"
+                placeholder="Third Exercise?"/>
+                <br>
+            <input 
+                type='text'
+                id="repititionsThree"
+                placeholder='Number of Reps?'/>
+                <br>
+            <input 
+                type='text'
+                id="setsThree"
+                placeholder="Number of Sets?"/>  
+                <br>    
+                
+
+
+            <button>Add Workout</button>
+            <button id ="getWorkoutsBtn">See Workouts</button>
+
+
+        </form>
+
+   
     <main>
+
+
         <h2>Workouts</h2>
         <section id = "workout-container"></section>
     </main>
