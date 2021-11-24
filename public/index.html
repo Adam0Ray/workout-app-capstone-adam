@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercise App</title>
-    <link rel="stylesheet" href="/styles">
+    <link rel="stylesheet" href="../public/index.css">
 </head>
 <body>
     <h1>3-By-30 Workout App</h1>
@@ -28,7 +28,7 @@
             <br>
         <input 
             type='text'
-            id="repititionOne"
+            id="repititionsOne"
             placeholder="Number of Reps?"/>
             <br>
         <input 
@@ -69,7 +69,16 @@
            
         <button>Add Workout</button>
     </form>
-    <section id = "workout-container"></section>
-    <script src="/js"></script>
+
+    <button id ="getWorkoutsBtn">See Workouts</button>
+
+    <main>
+        <h2>Workouts</h2>
+        <section id = "workout-container"></section>
+    </main>
+    
+
+    <script src="../node_modules/axios/dist/axios.min.js"></script>
+    <script src="../public/index.js"></script>
 </body>
 </html>

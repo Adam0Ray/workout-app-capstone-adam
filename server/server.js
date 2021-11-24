@@ -1,37 +1,47 @@
 require('dotenv').config()
 const express = require('express')
+// const path = require('path')
 const app = express()
 const cors = require('cors')
 const {SERVER_PORT} = process.env
 const {
-    getWorkout,
+    getWorkouts,
     createWorkout,
     deleteWorkout
 } = require('./controller.js')
 
-// app.use(express.json())
+app.use(express.json())
 app.use(cors())
 
 //Connect Public for Deployment
 // app.use(express.static("public"));
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/index.html'))
-})
+// app.get('/', (req, res) => {
+//     res.sendFile(path.join(__dirname, '../public/index.html'))
+// })
 
-app.get('/styles', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/index.css'))
-})
+// app.get('../public/index.css', (req, res) => {
+//     res.sendFile(path.join(__dirname, '../public/index.css'))
+// })
 
-app.get('/js', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/index.js'))
-})
+// app.get('../public/index.js', (req, res) => {
+//     res.sendFile(path.join(__dirname, '../public/index.js'))
+// })
 // Workouts
-app.get('/workout', getWorkout)
+ app.get('/workouts', 
+ getWorkouts
+// function (req,res) {
+
+// }
+)
+
 
 // Create and Delete Workouts
-app.post('/workout', createWorkout)
-app.delete('/workout/:id', deleteWorkout)
+app.post('/workouts',
+    createWorkout)
+app.delete('/workouts/:id', 
+    deleteWorkout)
 
 //PORT
 app.listen(SERVER_PORT, () => console.log(`up on ${SERVER_PORT}`))
+
