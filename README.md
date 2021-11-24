@@ -4,13 +4,13 @@
 * [Summary](#summary)
 * [Technologies](#technologies)
 * [Features](#features)
-* [Setup/Installation](#setup)
+* [Installation](#installation)
 * [About the Developer](#developer)
 
 ## <a name="summary"></a>Summary
     The goal of this app is to document and share workouts that can be completed in under 30 minutes, comprised of 3 workouts with a given number of repetitions and sets.
 
-## <a name="tech-stack"></a>Tech Stack
+## <a name="Technologies"></a>Technologies
 __Front End:__ HTML, CSS, JavaScript, Axios<br/>
 __Back End:__ JavaScript, Postgres, Dotenv, Sequelize, Github, Heroku, Cors, Express, Nodemon  <br/>
 __Dependencies:__ 
@@ -26,7 +26,7 @@ __Dependencies:__
 ## <a name="features"></a>Features
 Use the Workout App to view workouts that others have posted.  Become your own author and add your own workouts to the App or delete bad workouts.
 
-#### Requirements
+## <a name="instalation"></a>Installation
 
 To run this app on your local computer:
 Clone down repository into your code editor 
