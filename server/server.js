@@ -7,8 +7,11 @@ const {SERVER_PORT} = process.env
 const {
     getWorkouts,
     createWorkout,
-    deleteWorkout
+    deleteWorkout,
 } = require('./controller.js')
+const {
+    seed
+} = require('./seed.js')
 
 app.use(express.json())
 app.use(cors())
@@ -27,12 +30,15 @@ app.use(cors())
 // app.get('../public/index.js', (req, res) => {
 //     res.sendFile(path.join(__dirname, '../public/index.js'))
 // })
+
+
+
+// DEV
+app.post('/seed', seed)
+
 // Workouts
  app.get('/workouts', 
  getWorkouts
-// function (req,res) {
-
-// }
 )
 
 
