@@ -24,7 +24,7 @@ __Dependencies:__
     "sequelize": "^6.12.0-alpha.1"
 
 ## <a name="features"></a>Features
-Use the Workout App to view workouts that others have posted.  Become your own author and add your own workouts to the App or delete bad workouts.
+Use the Workout App to view workouts that others have posted.  Become your own author and add your own workouts to the App, Edit existing workouts, or delete workouts.
 
 ## <a name="instalation"></a>Installation
 

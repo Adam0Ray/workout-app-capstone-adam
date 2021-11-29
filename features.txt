@@ -1,3 +1,6 @@
-1) Users can Get/View existing workouts upon page refresh or using See Workouts button
-2) Users can Post/Add new workouts by utilizing the form and then clicking the Add Workout button
+1) Users can Get/View existing workouts upon page refresh of page
+2) Users can Post/Add new workouts by utilizing the form and then clicking the Save Workout button
 3) Users can Delete/remove existing workouts/workout cards by clicking the Delete Button in the workout-container 
+4) Users can auto populate the form with existing cards by clicking the Edit button in the workout-container
+5) Users can Patch/edit existing workouts/workout cards by clicking the Edit Button in the workout-container
+6) Form will set values to null after Save Workout Button is clicked
