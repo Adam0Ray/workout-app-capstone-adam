@@ -9,7 +9,6 @@
 
 ## <a name="summary"></a>Summary
     The goal of this app is to document and share workouts that can be completed in under 30 minutes, comprised of 3 workouts with a given number of repetitions and sets.
-
 ## <a name="Technologies"></a>Technologies
 __Front End:__ HTML, CSS, JavaScript, Axios<br/>
 __Back End:__ JavaScript, Postgres, Dotenv, Sequelize, Github, Heroku, Cors, Express, Nodemon  <br/>
