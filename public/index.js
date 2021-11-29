@@ -1,23 +1,24 @@
-
 const workoutList = document.querySelector('#workout-container')
 const form = document.querySelector('#formId')
 const getWorkoutsBtn = document.querySelector('#getWorkoutsBtn')
 
+let editWorkoutId = null
 
-function handleSubmit(e) {
+let workoutNameInput = document.getElementById('workoutName')
+let descriptionInput = document.getElementById('description')
+let exerciseOneInput = document.getElementById('exerciseOne')
+let repititionOneInput = document.getElementById('repititionsOne')
+let setsOneInput = document.getElementById('setsOne')
+let exerciseTwoInput = document.getElementById('exerciseTwo')
+let repititionsTwoInput = document.getElementById('repititionsTwo')
+let setsTwoInput = document.getElementById('setsTwo')
+let exerciseThreeInput = document.getElementById('exerciseThree')
+let repititionsThreeInput = document.getElementById('repititionsThree')
+let setsThreeInput = document.getElementById('setsThree')
+
+
+async function handleSubmit(e) {
     e.preventDefault()
-
-    let workoutNameInput = document.getElementById('workoutName')
-    let descriptionInput = document.getElementById('description')
-    let exerciseOneInput = document.getElementById('exerciseOne')
-    let repititionOneInput = document.getElementById('repititionsOne')
-    let setsOneInput = document.getElementById('setsOne')
-    let exerciseTwoInput = document.getElementById('exerciseTwo')
-    let repititionsTwoInput = document.getElementById('repititionsTwo')
-    let setsTwoInput = document.getElementById('setsTwo')
-    let exerciseThreeInput = document.getElementById('exerciseThree')
-    let repititionsThreeInput = document.getElementById('repititionsThree')
-    let setsThreeInput = document.getElementById('setsThree')
     
     let bodyObj = {
         workoutNameInput : workoutNameInput.value,
@@ -33,37 +34,88 @@ function handleSubmit(e) {
         setsThreeInput : setsThreeInput.value
 
     }
-    // console.log(bodyObj)
 
-    createNewWorkout(bodyObj)
-
+    if(editWorkoutId !== null){
+        await editWorkout(editWorkoutId, bodyObj)
+        //patch
+        editWorkoutId = null
+    } else {
+        await createNewWorkout(bodyObj)
+    }
+    workoutNameInput.value = null
+    descriptionInput.value = null
+    exerciseOneInput.value = null
+    repititionOneInput.value = null
+    setsOneInput.value = null
+    exerciseTwoInput.value = null
+    repititionsTwoInput.value = null
+    setsTwoInput.value = null
+    exerciseThreeInput.value = null
+    repititionsThreeInput.value = null
+    setsThreeInput.value = null
 }
-function createNewWorkout(body) {
-    axios.post('http://localhost:4060/workouts', body)
+
+async function editWorkout(id, body) {
+    await axios.patch(`http://localhost:4060/workouts/${id}`, body)
         .then(() =>  getWorkouts())
         .catch(err => console.log(err))
 }
 
-function deleteCard(id) {
-    axios.delete(`http://localhost:4060/workouts/${id}`)
+async function createNewWorkout(body) {
+    await axios.post('http://localhost:4060/workouts', body)
+        .then(() =>  getWorkouts())
+        .catch(err => console.log(err))
+}
+
+async function deleteCard(id) {
+    await axios.delete(`http://localhost:4060/workouts/${id}`)
         .then(() => getWorkouts())
         .catch(err => console.log(err))
 }
 
-function getWorkouts() {
+async function getWorkout(id) {
+    const response = await axios.get(`http://localhost:4060/workouts/${id}`)
+        .catch(err => console.log(err))
+        console.log(response.data[0])
+        return response.data[0]
+}
+
+async function editCard(workout_id) {
+    
+    let workout = await getWorkout(workout_id)
+    editWorkoutId = workout_id
+
+    console.log(workout)
+    workoutNameInput.value = workout.workout_name
+    descriptionInput.value = workout.description
+    exerciseOneInput.value = workout.exercise_one
+    repititionOneInput.value = workout.repetitions_one
+    setsOneInput.value = workout.sets_one
+    exerciseTwoInput.value = workout.exercise_two
+    repititionsTwoInput.value = workout.repetitions_two
+    setsTwoInput.value = workout.sets_two
+    exerciseThreeInput.value = workout.exercise_three
+    repititionsThreeInput.value = workout.repetitions_three
+    setsThreeInput.value = workout.sets_three
+}
+
+
+async function getWorkouts() {
     workoutList.innerHTML = ''
 
-    axios.get('http://localhost:4060/workouts')
+    await axios.get('http://localhost:4060/workouts')
         .then(res => {
             res.data.forEach(workout=> {
                 const workoutCard = 
                 `<div class="card">
+                    <h2>${workout['workout_id']}</h2>
                     <h2>${workout['workout_name']}</h2>
                     <h3>${workout['description']}</h3>
                     <p>${workout['exercise_one']}, ${workout['repetitions_one'] + ' Reps'}, ${workout['sets_one']  + ' Sets'}</p>
                     <p>${workout['exercise_two']}, ${workout['repetitions_two'] + ' Reps'}, ${workout['sets_two']  + ' Sets'}</p>
                     <p>${workout['exercise_three']}, ${workout['repetitions_three'] + ' Reps'}, ${workout['sets_three']  + ' Sets'}</p>
                     <button onclick="deleteCard(${workout['workout_id']})">Delete</button>
+                    <button onclick="editCard(${workout['workout_id']})">Edit</button>
                 </div>`
             
                 workoutList.innerHTML += workoutCard
@@ -74,87 +126,5 @@ function getWorkouts() {
 
 
 getWorkouts()
-// makeWorkoutCard()
-// deleteCard()
 form.addEventListener('submit', handleSubmit)
-getWorkoutsBtn.addEventListener('click',getWorkouts)
 
-
-
-// function makeWorkoutCard(workout) {
-//     const workoutCard = 
-//     `<div class="card">
-//         <h2>${workout['workout_name']}</h2>
-//         <h3>${workout['description']}</h3>
-//         <p>${workout['exercise_one']}, ${workout['repetitions_one']}, ${workout['sets_one']}</p>
-//         <p>${workout['exercise_two']}, ${workout['repetitions_two']}, ${workout['sets_two']}</p>
-//         <p>${workout['exercise_three']}, ${workout['repetitions_three']}, ${workout['sets_three']}</p>
-//         <button onclick="deleteCard(${workout['workout_id']})">Delete</button>
-//     </div>`
-
-//     return workoutCard
-// }
-
-
-// function getWorkouts() {
-//     workoutNameInput.innerHTML = ''
-
-//     axios.get('https://workout-app-capstone-adam.herokuapp.com/workouts')
-//         .then(res => {
-//             res.data.forEach(elem => {
-//                 let workoutCard = `<div class="workout-card">
-//                     <h2>${elem.workouts}</h2>                    
-//                     <button onclick="deleteCard(${elem['workout_id']})">Delete</button>
-//                     </div>
-//                 `
-
-//                 workoutNameInput.innerHTML += workoutCard
-//             })
-//         })
-//         console.log(res)
-// }
-
-// if (workoutNameInput.value < 1) {
-//     alert ('You must enter a workout name')
-//     return
-// }
-// if (descriptionInput.value < 1) {
-//     alert ('You must enter a description')
-//     return
-// }
-// if (exerciseOneInput.value < 1) {
-//     alert ('You must enter an exercise')
-//     return
-// }
-// if (repititionOneInput.value < 1) {
-//     alert ('You must enter a rep')
-//     return
-// }
-// if (setsOneInput.value < 1) {
-//     alert ('You must enter a set')
-//     return
-// }
-// if (exerciseTwoInput.value < 1) {
-//     alert ('You must enter an exercise')
-//     return
-// }
-// if (repititionsTwoInput.value < 1) {
-//     alert ('You must enter a rep')
-//     return
-// }
-// if (setsTwoInput.value < 1) {
-//     alert ('You must enter a set')
-//     return
-// }
-// if (exerciseThreeInput.value < 1) {
-//     alert ('You must enter an exercise')
-//     return
-// }
-// if (repititionsThreeInput.value < 1) {
-//     alert ('You must enter a rep')
-//     return
-// }
-// if (setsThreeInput.value < 1) {
-//     alert ('You must enter a set')
-//     return
-// }
