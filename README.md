@@ -25,16 +25,16 @@ __Dependencies:__
 
 ## <a name="features"></a>Features
 Use the Workout App to view workouts that others have posted.  Become your own author and view existing workouts (GET), add your own workouts to the App (POST), Edit existing workouts(PATCH), or delete workouts(DELETE).
-
+![Alt text](https://github.com/Adam0Ray/workout-app-capstone-adam/blob/master/static/AppAbout.JPG?raw=true)
 This app is designed to create and share exercises which consist of 3 different exercises,
 to be performed under 30 minutes with the intention of very little to no breaks during the circuit.
 
 To add a workout, Please fill in the form on the Home Page and Click the Save Workout button
-
+![Alt text](https://github.com/Adam0Ray/workout-app-capstone-adam/blob/master/static/AppTop.JPG?raw=true)
 To edit a workout, click the edit button on the workout card, which will auto-populate the form, edit what you choose, and click the Save Workout Button.
 
 To delete a workout, click the Delete button on the workout that you choose to delete.
-
+![Alt text](https://github.com/Adam0Ray/workout-app-capstone-adam/blob/master/static/AppBottom.JPG?raw=true)
 ## <a name="instalation"></a>Installation
 
 To run this app on your local computer:
