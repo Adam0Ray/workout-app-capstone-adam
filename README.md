@@ -23,13 +23,15 @@ __Dependencies:__
     "sequelize": "^6.12.0-alpha.1"
 
 ## <a name="features"></a>Features
+Watch the App Demo by clicking the image below:
+[![Watch the App Demo](https://github.com/Adam0Ray/workout-app-capstone-adam/blob/master/static/AppTop.JPG?raw=true)](https://youtu.be/zGD1ijf67dY?list=PLP86Iv3qsm-ygxUuEb5Wzn_TSpSEO1fjC)
 Use the Workout App to view workouts that others have posted.  Become your own author and view existing workouts (GET), add your own workouts to the App (POST), Edit existing workouts(PATCH), or delete workouts(DELETE).
 ![Alt text](https://github.com/Adam0Ray/workout-app-capstone-adam/blob/master/static/AppAbout.JPG?raw=true)
 This app is designed to create and share exercises which consist of 3 different exercises,
 to be performed under 30 minutes with the intention of very little to no breaks during the circuit.
 
 To add a workout, Please fill in the form on the Home Page and Click the Save Workout button
-![Alt text](https://github.com/Adam0Ray/workout-app-capstone-adam/blob/master/static/AppTop.JPG?raw=true)
+
 To edit a workout, click the edit button on the workout card, which will auto-populate the form, edit what you choose, and click the Save Workout Button.
 
 To delete a workout, click the Delete button on the workout that you choose to delete.
