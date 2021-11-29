@@ -108,7 +108,7 @@ async function getWorkouts() {
             res.data.forEach(workout=> {
                 const workoutCard = 
                 `<div class="card">
-                    <h2>${workout['workout_id']}</h2>
+                    <h2>${'Exercise Number ' + workout['workout_id']}</h2>
                     <h2>${workout['workout_name']}</h2>
                     <h3>${workout['description']}</h3>
                     <p>${workout['exercise_one']}, ${workout['repetitions_one'] + ' Reps'}, ${workout['sets_one']  + ' Sets'}</p>

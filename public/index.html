@@ -9,20 +9,34 @@
 </head>
 <body>
     <header>
+        <nav>
+            <ol>
+                <li class="views"><a href="./index.html">Home</a></li> 
+                <li class="views"><a href="./about.html">About</a></li>
+            </ol>
+        </nav>
         <h1>3-By-30 Workout App</h1>
-            <p>This app is designed to create and share exercises which consist of 3 different exercises to be performed under 30 minutes with the intention of very little to no breaks during the circuit. </p>
-            <p>To add a workout, Please fill in the form below and Click the Add Workout button</p>
+
+            <p>This app is designed to create and share exercises which consist of 3 different exercises,
+                to be performed under 30 minutes with the intention of very little to no breaks during the circuit.
+                <br>
+                <br>
+                To add a workout, Please fill in the form on the Home Page and Click the Save Workout button
+                <br>
+                To edit a workout, click the edit button on the workout card, which will auto-populate the form, edit what you choose, and click the Save Workout Button.
+                <br>
+                To delete a workout, click the Delete button on the workout that you choose to delete.</p>
     </header>
 
-<div class = "leftColumn">
+    <div class = "flex-container">
 
-    </div>
+        <div id="video-locator">
+            <video width = "896" height = 504" autoplay loop controls muted>
+                <source src="https://storage.coverr.co/videos/wlH2cg8ev013EU00HYPvQTVcXCPUzul4Rw?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6Ijg3NjdFMzIzRjlGQzEzN0E4QTAyIiwiaWF0IjoxNjM4MTk1NjkwfQ.pGIS03rRgLS90qbtLDYhxojZxTEdq6xo7VWWezQdZBw" typo = "video/mp4" alt='Video of Exercise'>
+            </video>
+            
+        </div>
         <form id="formId">         
-            <div id="locator">
-                <img src="https://cdn.pixabay.com/photo/2016/03/27/23/00/weight-lifting-1284616__340.jpg" alt="Photo of weights" >
-                
-            </div>
-
             <input 
                 type='text'
                 id="workoutName"
@@ -87,11 +101,13 @@
 
 
         </form>
-
+    </div>
    
-    <main>
-  
+    <footer>
         <h2>Workouts</h2>
+    </footer>
+
+    <main>      
         <section id = "workout-container"></section>
     </main>
     
