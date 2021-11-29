@@ -23,6 +23,9 @@ __Dependencies:__
     "sequelize": "^6.12.0-alpha.1"
 
 ## <a name="features"></a>Features
+Demo
+https://youtu.be/zGD1ijf67dY
+
 Use the Workout App to view workouts that others have posted.  Become your own author and view existing workouts (GET), add your own workouts to the App (POST), Edit existing workouts(PATCH), or delete workouts(DELETE).
 ![Alt text](https://github.com/Adam0Ray/workout-app-capstone-adam/blob/master/static/AppAbout.JPG?raw=true)
 This app is designed to create and share exercises which consist of 3 different exercises,
