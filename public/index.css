@@ -1,5 +1,5 @@
 header{
-    background-image: url(https://images.pexels.com/photos/4164843/pexels-photo-4164843.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    background-image: url(https://github.com/Adam0Ray/workout-app-capstone-adam/blob/master/static/headerPhoto.jpeg?raw=true);
     border:2px solid greenyellow;
     border-width: 2px;
     height: 30vh;
@@ -33,7 +33,7 @@ p{color: white;
 }
 
 
-body {background-image: url(https://images.pexels.com/photos/1022692/pexels-photo-1022692.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+body {background-image: url(https://github.com/Adam0Ray/workout-app-capstone-adam/blob/master/static/backgroundPhoto.jpeg?raw=true);
 
 }
 
