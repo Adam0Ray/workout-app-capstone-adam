@@ -37,7 +37,6 @@ async function handleSubmit(e) {
 
     if(editWorkoutId !== null){
         await editWorkout(editWorkoutId, bodyObj)
-        //patch
         editWorkoutId = null
     } else {
         await createNewWorkout(bodyObj)

@@ -11,7 +11,7 @@
     The goal of this app is to document and share workouts that can be completed in under 30 minutes, comprised of 3 workouts with a given number of repetitions and sets.
 ## <a name="Technologies"></a>Technologies
 __Front End:__ HTML, CSS, JavaScript, Axios<br/>
-__Back End:__ JavaScript, Postgres, Dotenv, Sequelize, Github, Heroku, Cors, Express, Nodemon  <br/>
+__Back End:__ JavaScript, PostgresSQL, Dotenv, Sequelize, Github, Heroku, Cors, Express, Nodemon  <br/>
 __Dependencies:__ 
     "axios": "^0.24.0",
     "cors": "^2.8.5",
@@ -23,7 +23,11 @@ __Dependencies:__
     "sequelize": "^6.12.0-alpha.1"
 
 ## <a name="features"></a>Features
-Watch the App Demo by clicking the image below:
+Watch the App Technical Demo by clicking the image below:
+
+[![Watch the App Demo](https://github.com/Adam0Ray/workout-app-capstone-adam/blob/master/static/AppTop.JPG?raw=true)](https://youtu.be/JhqAOs-d4XQ)
+
+Watch the App Browser Demonstration by clicking the image below:
 [![Watch the App Demo](https://github.com/Adam0Ray/workout-app-capstone-adam/blob/master/static/AppTop.JPG?raw=true)](https://youtu.be/zGD1ijf67dY?list=PLP86Iv3qsm-ygxUuEb5Wzn_TSpSEO1fjC)
 Use the Workout App to view workouts that others have posted.  Become your own author and view existing workouts (GET), add your own workouts to the App (POST), Edit existing workouts(PATCH), or delete workouts(DELETE).
 ![Alt text](https://github.com/Adam0Ray/workout-app-capstone-adam/blob/master/static/AppAbout.JPG?raw=true)
