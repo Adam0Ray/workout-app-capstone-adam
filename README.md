@@ -25,7 +25,7 @@ __Dependencies:__
 ## <a name="features"></a>Features
 Watch the App Technical Demo by clicking the image below:
 
-[![Watch the App Demo](https://github.com/Adam0Ray/workout-app-capstone-adam/blob/master/static/AppTop.JPG?raw=true)](https://youtu.be/JhqAOs-d4XQ)
+[![Watch the App Demo](https://github.com/Adam0Ray/workout-app-capstone-adam/blob/master/static/technicalDemoPhoto.JPG?raw=true)](https://youtu.be/JhqAOs-d4XQ)
 
 Watch the App Browser Demonstration by clicking the image below:
 [![Watch the App Demo](https://github.com/Adam0Ray/workout-app-capstone-adam/blob/master/static/AppTop.JPG?raw=true)](https://youtu.be/zGD1ijf67dY?list=PLP86Iv3qsm-ygxUuEb5Wzn_TSpSEO1fjC)
